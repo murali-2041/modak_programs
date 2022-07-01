@@ -20,7 +20,7 @@ def get_ec2_volumes(ec2_resource):
             new_dict = [{u: {"size": v}} for (u, v) in zip(vol_list, size_list)]
 
             #creating a dictionary with instance id as a key and their respective volume id's along with their sizes as values
-            out = dict({instance.id: new_dict}
+            out = dict({instance.id: new_dict})
                        
         res.append(out) #adding all the instance volume details in to res list
     return res
